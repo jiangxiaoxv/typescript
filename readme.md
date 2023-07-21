@@ -99,4 +99,42 @@
             return keys.map(key => obj[key])
         }
 # 映射类型
+    interface Obj {
+        a: string;
+        b: number;
+        c: boolean;
+    }
+    type ReadonlyObj = Readonly<Obj>
+
+    interface Obj {
+        a: string;
+        b: number;
+        c: boolean;
+    }
+    // 同态
+    type ReadonlyObj = Readonly<Obj>
+    type PartialObj = Partial<Obj>
+    type PickObj = Pick<Obj, 'a' | 'b'>
+
+    // 非同态
+    type RecordObj = Record<'x' | 'y', Obj>
+# 条件类型
+    // T extends U ? X: Y
+    type TypeName<T> = 
+        T extends string ? "string":
+        T extends number ? "number":
+        T extends boolean ? "boolean : 'object'
+    type T1 = TypeName<string>
+
+# ts使用cmd
+    1. 需安装ts-node -g
+
+# ts命名空间
+
+# npm i fork-ts-checker-webpack-plugin -D
+# awesome-typescript-loader 与tsloader的区别：
+  - 更适合与babel集成，使用babel的转译和缓存
+  - 不需要安装额外的插件，就可以把类型检查放在独立进程中进行
+  npm i awesome-typescript-loader -D
+
 

@@ -40,3 +40,9 @@ import './style/index.css'
 
 import './ts-modules/zongjie'
 
+// import $ from 'jquery'
+// import m from 'moment'
+
+// console.log(window.gio)
+// console.log(globalLib.doAnything())
+

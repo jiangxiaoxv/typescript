@@ -6,7 +6,7 @@
 let myObj = { size: 10, label: "Size 10 Object" };
 printLabel(myObj); */
 
-interface LabelledValue {
+/* interface LabelledValue {
     label: string,
     readonly size: number,
     [prop: string]: string | number,
@@ -139,7 +139,7 @@ let myIdentitys: <U>(arg: U) => U = identity;
 console.log(myIdentitys) */
 
 
-interface GenericIdentityFn {
+/* interface GenericIdentityFn {
     <T>(arg: T): T;
 }
 
@@ -211,11 +211,11 @@ interface Lib {
     (): any;
     version: string;
     doSometing(): void
-}
+}  */
 /* let lib: Lib = (() => {}) as Lib
 lib.version = '1.0'
 lib.doSometing = () => {} */
-function getLib(): Lib {
+/* function getLib(): Lib {
     let lib: Lib = (() => {
         return lib.version
     }) as Lib
@@ -226,10 +226,49 @@ function getLib(): Lib {
 let lib1 = getLib()
 lib1()
 lib1.doSometing()
-let lib2 = getLib()
+let lib2 = getLib() */
 
-interface IIndexArrays {
-    [key: number]: string;
+
+/* interface Obj {
+    a: string;
+    b: number;
+    c: boolean;
 }
-let arrIndexArrays: IIndexArrays = ['1', '2', '4']
+// 同态
+type ReadonlyObj = Readonly<Obj>
+type PartialObj = Partial<Obj>
+type PickObj = Pick<Obj, 'a' | 'b'>
 
+// 非同态
+type RecordObj = Record<'x' | 'y', Obj>
+
+type TypeName<T> = 
+        T extends string ? "string": 
+            T extends number ? "number":
+                T extends boolean ? "boolean" : "object"
+
+type T1 = TypeName<string>
+type T2 = TypeName<string[]>
+
+type T3 = TypeName<string | string[]>
+type Diff<T, U> = T extends U ? never : T
+type T4 = Diff<"a" | "b" | "c", "a" | "e">
+
+type NotNull<T> = Diff<T, undefined | null>
+type T5 = NotNull<string | number | undefined | null>
+
+// Exclude<T, U>, NonNullable<T> Extract<T, U>
+type T6 = Exclude<string | number, number>
+
+// ReturnType<T>
+type T7 = ReturnType<() => string> */
+
+/// <reference path="a.ts" />
+namespace shape {
+    export function square(x: number) {
+        return x * x
+    }
+}
+import square = shape.square
+// console.log(s)
+console.log(square(1))

@@ -16,16 +16,23 @@
   "author": "jxx",
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^5.1.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
+    "eslint": "^8.13.0",
+    "eslint-plugin-vue": "^8.6.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.3",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "webpack": "^5.66.0"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
+    "moment": "^2.29.2",
     "typescript": "^4.5.4",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
