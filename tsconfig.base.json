@@ -1,13 +1,5 @@
 {
-    "files": [
-        "src"
-    ],
-    "include": [
-        "./src/**/*.ts",
-        "./src/**/*.d.ts"
-      ],
-      "exclude": [
-        "node_modules",
-        "src/lib"
-      ]
+  "files": ["src"],
+  "include": ["./src/**/*.ts", "./src/**/*.d.ts"],
+  "exclude": ["node_modules", "src/lib"]
 }

@@ -1,4 +1,3 @@
-
 /* function printLabel(labelledObj: { label: string }) {
     console.log(labelledObj.label);
 }
@@ -138,7 +137,6 @@ myIdentity = <T>(str: T) =>  {
 let myIdentitys: <U>(arg: U) => U = identity;
 console.log(myIdentitys) */
 
-
 /* interface GenericIdentityFn {
     <T>(arg: T): T;
 }
@@ -228,7 +226,6 @@ lib1()
 lib1.doSometing()
 let lib2 = getLib() */
 
-
 /* interface Obj {
     a: string;
     b: number;
@@ -265,10 +262,12 @@ type T7 = ReturnType<() => string> */
 
 /// <reference path="a.ts" />
 namespace shape {
-    export function square(x: number) {
-        return x * x
-    }
+  export function square(x: number) {
+    return x * x
+  }
 }
+import { log } from 'console'
 import square = shape.square
 // console.log(s)
 console.log(square(1))
+console.log('正在学习typescript')

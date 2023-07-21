@@ -1,4 +1,3 @@
-
 // import './example/basic-typs'
 
 // import './example/symbol'
@@ -45,4 +44,3 @@ import './ts-modules/zongjie'
 
 // console.log(window.gio)
 // console.log(globalLib.doAnything())
-

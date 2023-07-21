@@ -10,6 +10,7 @@ module.exports = {
     'plugin:vue/essential',
     'plugin:@typescript-eslint/recommended',
   ],
+
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -17,5 +18,14 @@ module.exports = {
   plugins: ['vue', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'prefer-const': [
+      'warn',
+      {
+        destructuring: 'any',
+        ignoreReadBeforeAssign: false,
+      },
+    ],
   },
 }

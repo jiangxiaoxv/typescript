@@ -16,6 +16,7 @@
   "author": "jxx",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
     "clean-webpack-plugin": "^4.0.0",
