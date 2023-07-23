@@ -27,5 +27,6 @@ module.exports = {
         ignoreReadBeforeAssign: false,
       },
     ],
+    'no-case-declarations': 0,
   },
 }
