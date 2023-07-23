@@ -22,5 +22,16 @@ const promise: Promise<number> = new Promise((res, rej) => {
   res(1)
 })
 promise.then((res) => {
-  console.log('>>>>>>>>>>>>>>>>>>res', res)
+  console.log(
+    '>>>>>>>>>>>>>>>>>>res',
+    res,
+    num,
+    date,
+    xhr,
+    timer,
+    div,
+    divs,
+    local,
+    lo
+  )
 })
