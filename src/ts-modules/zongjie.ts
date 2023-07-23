@@ -261,7 +261,7 @@ type T6 = Exclude<string | number, number>
 type T7 = ReturnType<() => string> */
 
 /// <reference path="a.ts" />
-namespace shape {
+/* namespace shape {
   export function square(x: number) {
     return x * x
   }
@@ -270,4 +270,36 @@ import { log } from 'console'
 import square = shape.square
 // console.log(s)
 console.log(square(1))
-console.log('正在学习typescript')
+console.log('正在学习typescript') */
+
+const canvas: HTMLCanvasElement = document.querySelector('#canvas')
+
+const ctx = canvas.getContext('2d')
+canvas.width = screen.availWidth
+canvas.height = screen.availHeight
+
+const str: string[] = 'XMLSWZS010101'.split('')
+const arr = Array(Math.ceil(canvas.width / 10)).fill(0)
+console.log('>>>>>>>>>>>>>>>>>>arr', arr)
+let timer
+const rain = () => {
+  ctx.fillStyle = 'rgba(0,0,0, 0.05)'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  ctx.fillStyle = '#0f0'
+
+  arr.forEach((item, index) => {
+    ctx.fillText(
+      str[Math.floor(Math.random() * str.length)],
+      index * 10,
+      item + 10
+    )
+    arr[index] =
+      item > canvas.height || item > 10000 * Math.random() ? 0 : item + 10
+  })
+}
+
+timer = setInterval(rain, 40)
+
+setTimeout(() => {
+  clearInterval(timer)
+}, 1000)
