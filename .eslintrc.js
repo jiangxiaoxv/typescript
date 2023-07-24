@@ -28,5 +28,6 @@ module.exports = {
       },
     ],
     'no-case-declarations': 0,
+    '@typescript-eslint/no-namespace': 'off',
   },
 }
