@@ -16,7 +16,7 @@ console.log(xiaoman.s) */
 ///
 
 /**02
- * Object 可以用来声明说有类型
+ * Object 可以用来声明所有类型
  * object 用来声明是引用类型的数据对象
  * {} == new Object 包含所有的类型 与 Object没有什么区别, 对变量无法进行属性的增加
  */
